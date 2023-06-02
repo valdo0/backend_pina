@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ventas",
+  "info": {
+    "singularName": "venta",
+    "pluralName": "ventas",
+    "displayName": "Venta"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "total": {
+      "type": "biginteger",
+      "required": true
+    },
+    "idPayment": {
+      "type": "string",
+      "required": false
+    },
+    "direccionEnvio": {
+      "type": "json",
+      "required": true
+    },
+    "productos": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

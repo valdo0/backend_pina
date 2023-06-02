@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variantes",
+  "info": {
+    "singularName": "variante",
+    "pluralName": "variantes",
+    "displayName": "Variante"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "talla": {
+      "type": "string",
+      "required": true
+    },
+    "cantidad": {
+      "type": "biginteger",
+      "required": true
+    },
+    "producto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::producto.producto"
+    }
+  }
+}
